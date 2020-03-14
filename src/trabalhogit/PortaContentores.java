@@ -9,7 +9,33 @@ package trabalhogit;
  *
  * @author tiagofigueiredo
  */
-public class PortaContentores {
-  
+public class PortaContentores extends Navio {
+    private int maxContentores;
+    
+    //Contrutor
+    
+    public PortaContentores(String Matricula){
+        super(Matricula);
+        maxContentores = 0;
+    }
+       
+    //Getter
+    public int getMaxContentores() {
+        return maxContentores;
+    }
+    
+    //Setter
+    public void setMaxContentores(int maxContentores) {
+        this.maxContentores = maxContentores;
+    }
+
+    @Override
+    public String toString() {
+        return "PortaContentores{" + "maxContentores=" + maxContentores + '}';
+    }
+    
+    
+    
+    
     
 }
