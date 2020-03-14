@@ -42,6 +42,34 @@ public class Porto {
         return false;
     }
     
+    public int getMaxContentores() {
+        int ct = 0;
+        
+        for(Navio n:navios)
+            if(n instanceof PortaContentores)
+                ct += ((PortaContentores) n).getMaxContentores();
+        
+        return ct;
+    }
+    
+    public float getTotalCarga(){
+        float ct = 0;
+        
+        for(Navio n:navios){
+            if(n instanceof PortaContentores)
+                ct += ((PortaContentores) n).getMaxContentores() * 10f;
+            if(n instanceof Petroleiro)
+                ct += ((Petroleiro) n).getCapacidadeCarga();
+        }
+        return ct;
+     } 
+    
+    public void listNavios(){
+        for(Navio n:navios){
+            System.out.println(n);
+        }
+            
+    }
     
     
     
