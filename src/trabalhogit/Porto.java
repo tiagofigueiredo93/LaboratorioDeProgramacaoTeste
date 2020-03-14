@@ -71,6 +71,27 @@ public class Porto {
             
     }
     
+    public static void main(String[] args){
+        
+        Porto p = new Porto();
+        Navio n = new Navio("1");
+        Petroleiro pt = new Petroleiro("2");
+        PortaContentores pc = new PortaContentores("3");
+        
+        n.setNome("N1");
+        pt.setNome("PT1"); pt.setCapacidadeCarga(200);
+        pc.setNome("PC1"); pc.setMaxContentores(100);
+        
+        p.addNavio(n);
+        p.addNavio(pt);
+        p.addNavio(pc);
+        p.addNavio(n);
+        
+        p.listNavios();
+        
+        System.out.printf("Total de carga = %.1f \n", p.getTotalCarga());
+        }  
+    
     
     
     
