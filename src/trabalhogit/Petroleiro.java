@@ -9,9 +9,30 @@ package trabalhogit;
  *
  * @author tiagofigueiredo
  */
-public class Petroleiro {
+public class Petroleiro extends Navio {
        
     private float capacidadeCarga;
     
+    //Construtor´
+    public Petroleiro(String matricula){
+        super(matricula);
+        capacidadeCarga=0;
+    }
+    
+    //Getters
+    public float getCapacidadeCarga(){
+        return capacidadeCarga;
+    }
+    
+    //Setter
+    public void setCapacidadeCarga(float capacidadeCarga){
+        this.capacidadeCarga = capacidadeCarga;
+        
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "Petroleiro{" + "capacidadeCarga=" + capacidadeCarga + '}';
+    }
     
 }
